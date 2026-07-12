@@ -482,6 +482,16 @@ textarea.q-input{resize:vertical;min-height:80px;}
 .semana-content{display:none;} .semana-content.active{display:block;}
 @media(max-width:480px){.nav-title span{display:none;}.nav-brand{max-width:100px;}}
 
+
+/* ── ABAS DE OPÇÃO DE REFEIÇÃO ── */
+.opcao-tabs{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap;}
+.opcao-tab{background:var(--dark2);border:1px solid var(--border);color:var(--white-dim);font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.5px;padding:10px 14px;min-height:40px;cursor:pointer;border-radius:3px;transition:all 0.3s;-webkit-tap-highlight-color:transparent;}
+.opcao-tab:hover{border-color:var(--gold);color:var(--gold);}
+.opcao-tab.active{color:var(--gold);border-color:var(--gold);background:var(--gold-dim);}
+.opcao-content{display:none;}
+.opcao-content.active{display:block;animation:fadeUp 0.3s ease;}
+.opcao-total{text-align:right;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--gold);margin:4px 2px 0;}
+.opcao-note{font-size:11px;color:var(--white-dim);line-height:1.7;margin:8px 2px 0;padding:8px 12px;background:var(--gold-dim);border-left:3px solid var(--gold);border-radius:3px;}
 </style>
 </head>
 <body>
@@ -512,19 +522,26 @@ textarea.q-input{resize:vertical;min-height:80px;}
 <section id="apresentacao" class="section active">
 
   <div class="client-hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="client-badge">Portal do Cliente · Consultoria LB</div>
       <h1 class="client-name">Bem-vindo,<br><strong>Thiago Sbampato</strong></h1>
       <p class="client-meta">Plano Personalizado · Luan Barreto Consultoria</p>
-      <div class="evolution-pills">
-        
-        
-        <div class="evo-pill"><div class="evo-label">Evolução</div><div class="evo-val" style="color:#7dd87d;">−10 kg</div></div>
-      </div>
       <div class="hero-divider"></div>
     </div>
+  </div>
+
+  <div class="plan-info-bar">
+    <div class="plan-pill"><div class="pl-label">Total diário</div><div class="pl-val">~3.050 kcal</div></div>
+    <div class="plan-pill"><div class="pl-label">Treinos/semana</div><div class="pl-val">5 treinos</div></div>
+    <div class="plan-pill"><div class="pl-label">Objetivo</div><div class="pl-val" style="font-size:13px;">Composição + Performance</div></div>
+    <div class="plan-pill"><div class="pl-label">Suporte</div><div class="pl-val" style="font-size:13px;">Seg–Sex · 8h–18h</div></div>
+  </div>
+
+  <div class="recados-box">
+    <h4>📌 Recados do Luan</h4>
+    <div class="recados-text">Thiago, o foco agora é evoluir com controle: preservar o que você já conquistou, melhorar a composição corporal e ganhar performance na corrida. Não é sobre perfeição — é sobre consistência todos os dias. Faz o básico bem feito, segue o processo e o resultado vem. Estou aqui contigo! 💪</div>
   </div>
 
   <div class="profile-grid">
@@ -534,25 +551,27 @@ textarea.q-input{resize:vertical;min-height:80px;}
       <div class="profile-item"><span class="label">Idade</span><span class="value">34 anos</span></div>
       <div class="profile-item"><span class="label">Peso</span><span class="value">96 kg</span></div>
       <div class="profile-item"><span class="label">Altura</span><span class="value">1,77 m</span></div>
-      <div class="profile-item"><span class="label">Gênero</span><span class="value">Masculino</span></div>
       <div class="profile-item"><span class="label">Profissão</span><span class="value">Engenheiro</span></div>
       <div class="profile-item"><span class="label">Cidade</span><span class="value">Belo Horizonte/MG</span></div>
+      <div class="profile-item"><span class="label">Esporte</span><span class="value">Musculação + Corrida</span></div>
       <div class="profile-item"><span class="label">Objetivo</span><span class="value">Composição + Performance</span></div>
     </div>
     <div class="welcome-box">
-      <p>Thiago, este é o seu portal personalizado da <strong>Consultoria LB</strong>. Aqui você encontra todo o seu planejamento — dieta, treino e relatório — em um só lugar, organizado e acessível a qualquer momento.</p>
-      <p>Você já provou que é capaz: <strong>−10 kg</strong> desde dezembro é resultado de consistência real. Agora o foco muda — não é mais só perder peso, é evoluir com controle, preservar o que foi conquistado e melhorar sua performance na corrida.</p>
-      <p>Cada detalhe deste plano foi pensado para o seu momento atual. <strong>Siga o processo.</strong></p>
+      <p>Thiago, este é o seu portal personalizado da <strong>Consultoria LB</strong>. Aqui você encontra todo o seu planejamento — dieta, treino, cardio e relatório — em um só lugar, organizado e acessível a qualquer momento.</p>
+      <p>O foco do seu momento não é mais só perder peso: é <strong>evoluir com controle</strong>, preservar o que foi conquistado e melhorar sua performance na corrida. Cada detalhe deste plano foi pensado pra isso.</p>
+      <p>Não é sobre perfeição. É sobre <strong>consistência todos os dias</strong>. Faz o básico bem feito que o resultado vem.</p>
       <p style="color:var(--gold);font-size:12px;letter-spacing:1px;margin-top:18px;">— Luan Barreto · Nutricionista &amp; Treinador</p>
     </div>
   </div>
 
   <div class="section-header"><h2>O que você <span>encontra aqui</span></h2><div class="section-line"></div></div>
   <div class="info-grid">
-    <div class="info-box"><div class="icon">🥗</div><h4>Planejamento Alimentar</h4><p>4 refeições diárias com horários, quantidades, calorias e substituições. Total: ~2.900 kcal/dia com ajuste estratégico de +335 kcal.</p></div>
-    <div class="info-box"><div class="icon">🏋️</div><h4>Planejamento de Treino</h4><p>5 treinos semanais integrados com a corrida: 2 de inferiores com foco em performance e 3 de superiores.</p></div>
-    <div class="info-box"><div class="icon">🏃</div><h4>Performance na Corrida</h4><p>Treinos de perna estruturados com exercícios unilaterais e pliometria para transferência direta à corrida.</p></div>
-    <div class="info-box"><div class="icon">📋</div><h4>Relatório de Consultoria</h4><p>Estratégia, orientações comportamentais e links educativos. Suporte direto de segunda a sexta das 8h às 18h.</p></div>
+    <div class="info-box"><div class="icon">🥗</div><h4>Dieta</h4><p>4 refeições diárias · ~3.050 kcal/dia · refeição 3 com 2 opções (sanduíches ou shake) · substituições completas.</p></div>
+    <div class="info-box"><div class="icon">🏋️</div><h4>Treino</h4><p>5 treinos semanais integrados à corrida: 2 de inferiores com foco em performance e 3 de superiores.</p></div>
+    <div class="info-box"><div class="icon">🏃</div><h4>Corrida &amp; Cardio</h4><p>Treinos de perna com exercícios unilaterais e pliometria para transferência direta à corrida.</p></div>
+    <div class="info-box"><div class="icon">📈</div><h4>Evolução</h4><p>Histórico de peso com gráfico e registro de fotos de acompanhamento.</p></div>
+    <div class="info-box"><div class="icon">📋</div><h4>Relatório</h4><p>Estratégia, orientações comportamentais e links educativos. Suporte de segunda a sexta, 8h às 18h.</p></div>
+    <div class="info-box"><div class="icon">💬</div><h4>Feedback</h4><p>Formulário semanal clicável com geração automática de resumo para o WhatsApp.</p></div>
   </div>
 
 </section>
@@ -562,7 +581,7 @@ textarea.q-input{resize:vertical;min-height:80px;}
   <div class="meal-total">
     <div class="total-pill">
       <span class="label">Total diário</span>
-      <span class="value">2.696</span>
+      <span class="value">~3.050</span>
       <span style="font-size:11px;color:var(--white-dim);">kcal</span>
     </div>
   </div>
@@ -597,13 +616,13 @@ textarea.q-input{resize:vertical;min-height:80px;}
         <div class="meal-num">2</div>
         <div><div class="meal-name">Almoço</div><span class="meal-time">Horário sugerido: 12:30</span></div>
       </div>
-      <div class="meal-kcal">766 <span>kcal</span></div>
+      <div class="meal-kcal">804 <span>kcal</span></div>
     </div>
     <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table">
       <thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (quantidade · kcal equiv.)</th></tr></thead>
       <tbody>
         <tr><td class="food-name">Arroz branco cozido</td><td class="food-qty">300g</td><td class="food-kcal">390</td><td class="food-sub">Batata-doce cozida <strong>330g · ~297kcal</strong><br>Macarrão integral cozido <strong>250g · ~292kcal</strong><br>Aipim cozido <strong>230g · ~304kcal</strong><br>Cuscuz marroquino cozido <strong>260g · ~308kcal</strong><br>Inhame cozido <strong>280g · ~308kcal</strong></td></tr>
-        <tr><td class="food-name">Feijão carioca</td><td class="food-qty">100g (cozido)</td><td class="food-kcal">76</td><td class="food-sub">Feijão preto <strong>95g · ~85kcal</strong><br>Lentilha cozida <strong>100g · ~116kcal</strong><br>Grão-de-bico cozido <strong>90g · ~126kcal</strong><br>Ervilha cozida <strong>110g · ~91kcal</strong><br>Edamame <strong>80g · ~112kcal</strong></td></tr>
+        <tr><td class="food-name">Feijão carioca</td><td class="food-qty">150g (cozido)</td><td class="food-kcal">114</td><td class="food-sub">Feijão preto <strong>145g · ~130kcal</strong><br>Lentilha cozida <strong>150g · ~174kcal</strong><br>Grão-de-bico cozido <strong>135g · ~189kcal</strong><br>Ervilha cozida <strong>165g · ~136kcal</strong><br>Edamame <strong>120g · ~168kcal</strong></td></tr>
         <tr><td class="food-name">Frango grelhado</td><td class="food-qty">150g</td><td class="food-kcal">165</td><td class="food-sub">Patinho grelhado <strong>140g · ~224kcal</strong><br>Atum em água <strong>155g · ~167kcal</strong><br>Salmão grelhado <strong>110g · ~219kcal</strong><br>Tilápia grelhada <strong>170g · ~187kcal</strong><br>Lombo de porco <strong>140g · ~182kcal</strong></td></tr>
         <tr><td class="food-name">Verduras e vegetais</td><td class="food-qty">200g</td><td class="food-kcal">60</td><td class="food-sub">Brócolis · Couve · Cenoura · Abobrinha · Espinafre · Chuchu · Aspargos (qualquer combinação, ~200g)</td></tr>
         <tr><td class="food-name">Abacaxi</td><td class="food-qty">150g</td><td class="food-kcal">75</td><td class="food-sub">Melão <strong>200g · ~60kcal</strong><br>Laranja <strong>150g · ~71kcal</strong><br>Mamão <strong>170g · ~73kcal</strong><br>Manga <strong>120g · ~74kcal</strong><br>Maçã <strong>150g · ~78kcal</strong></td></tr>
@@ -619,21 +638,50 @@ textarea.q-input{resize:vertical;min-height:80px;}
         <div class="meal-num">3</div>
         <div><div class="meal-name">Lanche da Tarde</div><span class="meal-time">Horário sugerido: 16:00</span></div>
       </div>
-      <div class="meal-kcal">610 <span>kcal</span></div>
+      <div class="meal-kcal">2 <span>opções</span></div>
     </div>
-    <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table">
-      <thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (quantidade · kcal equiv.)</th></tr></thead>
-      <tbody>
-        <tr><td class="food-name">Whey protein</td><td class="food-qty">50g (2 scoops)</td><td class="food-kcal">200</td><td class="food-sub">Frango grelhado <strong>150g · ~247kcal</strong><br>Atum em água <strong>165g · ~178kcal</strong><br>Patinho grelhado <strong>145g · ~232kcal</strong><br>Claras de ovo <strong>8 unidades · ~136kcal</strong> + 1 ovo inteiro<br>Iogurte grego desnatado <strong>330g · ~192kcal</strong></td></tr>
-        <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">40g</td><td class="food-kcal">160</td><td class="food-sub">Aveia em flocos <strong>40g · ~154kcal</strong><br>Tapioca (goma seca) <strong>70g · ~147kcal</strong><br>Pão integral <strong>2 fatias (60g) · ~148kcal</strong><br>Flocão de milho <strong>45g · ~158kcal</strong><br>Mix de castanhas <strong>25g · ~155kcal</strong></td></tr>
-        <tr><td class="food-name">Frutas variadas</td><td class="food-qty">250g</td><td class="food-kcal">125</td><td class="food-sub">Morango · Banana · Maçã · Mamão · Melão · Uva · Kiwi (qualquer fruta a gosto, ~250g)</td></tr>
-        <tr><td class="food-name">Iogurte zero</td><td class="food-qty">200ml</td><td class="food-kcal">80</td><td class="food-sub">Leite desnatado <strong>200ml · ~70kcal</strong><br>Kefir desnatado <strong>200ml · ~70kcal</strong><br>Iogurte grego desnatado <strong>130g · ~80kcal</strong><br>Cottage desnatado <strong>120g · ~84kcal</strong><br>Bebida vegetal sem açúcar <strong>250ml · ~70kcal</strong></td></tr>
-      </tbody>
-    </table>
+
+    <div class="opcao-tabs">
+      <button class="opcao-tab active" onclick="showOpcao('r3-op1',this)">🥪 Opção 1 · 2 sanduíches (sólida)</button>
+      <button class="opcao-tab" onclick="showOpcao('r3-op2',this)">🥤 Opção 2 · Shake (líquida)</button>
+    </div>
+
+    <!-- OPÇÃO 1 · 2 SANDUÍCHES -->
+    <div id="r3-op1" class="opcao-content active">
+      <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table">
+        <thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (quantidade · kcal equiv.)</th></tr></thead>
+        <tbody>
+          <tr><td class="food-name">Pão integral</td><td class="food-qty">4 fatias (120g)</td><td class="food-kcal">296</td><td class="food-sub">Tapioca (goma seca) <strong>140g · ~294kcal</strong><br>Aveia em flocos <strong>76g · ~293kcal</strong><br>Batata-doce cozida <strong>330g · ~297kcal</strong><br>Cuscuz cozido <strong>250g · ~296kcal</strong><br>Wrap integral <strong>2 un · ~300kcal</strong><br>Flocão de milho <strong>84g · ~294kcal</strong></td></tr>
+          <tr><td class="food-name">Atum, frango ou carne magra</td><td class="food-qty">120g</td><td class="food-kcal">130</td><td class="food-sub">Atum em água <strong>120g · ~130kcal</strong><br>Frango grelhado <strong>80g · ~132kcal</strong><br>Patinho grelhado <strong>80g · ~128kcal</strong><br>Carne moída magra <strong>75g · ~131kcal</strong><br>Ovos <strong>2 unidades · ~140kcal</strong><br>Blanquet de peru <strong>110g · ~132kcal</strong></td></tr>
+          <tr><td class="food-name">Queijo ricota</td><td class="food-qty">2 fatias (60g)</td><td class="food-kcal">80</td><td class="food-sub">Cottage desnatado <strong>115g · ~80kcal</strong><br>Mozzarella light <strong>40g · ~84kcal</strong><br>Queijo minas frescal <strong>60g · ~80kcal</strong><br>Cream cheese light <strong>40g · ~80kcal</strong><br>Requeijão light <strong>40g · ~80kcal</strong></td></tr>
+          <tr><td class="food-name">Frutas variadas</td><td class="food-qty">200g</td><td class="food-kcal">90</td><td class="food-sub">Morango · Banana · Maçã · Mamão · Melão · Uva · Kiwi (qualquer fruta a gosto, ~200g)</td></tr>
+          <tr><td class="food-name">Iogurte zero</td><td class="food-qty">200ml</td><td class="food-kcal">80</td><td class="food-sub">Leite desnatado <strong>200ml · ~70kcal</strong><br>Kefir desnatado <strong>200ml · ~70kcal</strong><br>Iogurte grego desnatado <strong>130g · ~80kcal</strong><br>Cottage desnatado <strong>120g · ~84kcal</strong><br>Bebida vegetal sem açúcar <strong>250ml · ~70kcal</strong></td></tr>
+        </tbody>
+      </table>
 <div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
+      <div class="opcao-note">🥪 2 sanduíches: cada um com 2 fatias de pão + 60g de proteína + 1 fatia de queijo (total: 4 fatias de pão + 120g de proteína). Proteína à escolha: atum, frango ou carne magra. Opção sólida e prática para levar.</div>
+      <div class="opcao-total">Total Opção 1 · ~676 kcal</div>
+    </div>
+
+    <!-- OPÇÃO 2 · SHAKE -->
+    <div id="r3-op2" class="opcao-content">
+      <div class="meal-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="meal-table">
+        <thead><tr><th>Alimento</th><th>Qtd.</th><th>kcal</th><th>Substituições (quantidade · kcal equiv.)</th></tr></thead>
+        <tbody>
+          <tr><td class="food-name">Whey protein</td><td class="food-qty">60g</td><td class="food-kcal">240</td><td class="food-sub">Frango grelhado <strong>180g · ~296kcal</strong><br>Atum em água <strong>200g · ~216kcal</strong><br>Patinho grelhado <strong>175g · ~280kcal</strong><br>Claras de ovo <strong>10 unidades · ~170kcal</strong> + 1 ovo inteiro<br>Iogurte grego desnatado <strong>400g · ~232kcal</strong></td></tr>
+          <tr><td class="food-name">Granola sem açúcar</td><td class="food-qty">80g</td><td class="food-kcal">320</td><td class="food-sub">Aveia em flocos <strong>80g · ~308kcal</strong><br>Tapioca (goma seca) <strong>145g · ~305kcal</strong><br>Pão integral <strong>4 fatias (120g) · ~296kcal</strong><br>Flocão de milho <strong>90g · ~315kcal</strong><br>Mix de castanhas <strong>50g · ~310kcal</strong></td></tr>
+          <tr><td class="food-name">Frutas variadas</td><td class="food-qty">200g</td><td class="food-kcal">90</td><td class="food-sub">Morango · Banana · Maçã · Mamão · Melão · Uva · Kiwi (qualquer fruta a gosto, ~200g)</td></tr>
+          <tr><td class="food-name">Iogurte zero</td><td class="food-qty">300ml</td><td class="food-kcal">120</td><td class="food-sub">Leite desnatado <strong>300ml · ~105kcal</strong><br>Kefir desnatado <strong>300ml · ~105kcal</strong><br>Iogurte grego desnatado <strong>195g · ~120kcal</strong><br>Cottage desnatado <strong>170g · ~119kcal</strong><br>Bebida vegetal sem açúcar <strong>380ml · ~106kcal</strong></td></tr>
+        </tbody>
+      </table>
+<div style="text-align:center;font-size:10px;color:rgba(245,240,232,0.5);padding:3px 0 10px;">← deslize →</div></div>
+      <div class="opcao-note">🥤 Shake/vitamina: bata o whey, a granola, as frutas e o iogurte zero. A líquida de sempre, agora com mais volume e fibras (granola) para dar mais saciedade.</div>
+      <div class="opcao-total">Total Opção 2 · ~770 kcal</div>
+    </div>
   </div>
 
   <!-- REFEIÇÃO 4 -->
+
   <div class="meal-card">
     <div class="meal-header">
       <div class="meal-header-left">
@@ -1583,23 +1631,8 @@ function getVideoLink(name) {
   return bestScore >= 2 ? best : null;
 }
 
-function resolveVideoLinks() {
-  document.querySelectorAll('.yt-link[data-exercise]').forEach(a => {
-    const ex = a.getAttribute('data-exercise');
-    const url = getVideoLink(ex);
-    if (url) {
-      a.href = url;
-      a.target = '_blank';
-      a.innerHTML = '▶ VER';
-      a.style.color = '#C9A84C';
-      a.style.borderColor = 'rgba(201,168,76,0.5)';
-    } else {
-      a.style.opacity = '0.25';
-      a.removeAttribute('href');
-    }
-  });
-}
-document.addEventListener('DOMContentLoaded', resolveVideoLinks);
+// Biblioteca v3: matching exato, SEM fuzzy. Links diretos no href.
+function resolveVideoLinks() { /* no-op */ }
 
 
 // ── NAVEGAÇÃO ──
@@ -1639,6 +1672,15 @@ if (localStorage.getItem('lb-theme') === 'light') document.body.classList.add('l
 
 // ── SAVE/LOAD ──
 function saveObs(el) { localStorage.setItem(el.dataset.key, el.value); }
+function showOpcao(id, btn){
+  var card = btn.closest('.meal-card');
+  if(!card) return;
+  card.querySelectorAll('.opcao-content').forEach(function(c){c.classList.remove('active');});
+  card.querySelectorAll('.opcao-tab').forEach(function(t){t.classList.remove('active');});
+  var el = document.getElementById(id);
+  if(el) el.classList.add('active');
+  if(btn) btn.classList.add('active');
+}
 function saveCardio(el) { localStorage.setItem(el.dataset.key, el.checked ? '1' : '0'); }
 function saveLoad(el) {
   const key = el.dataset.key;
@@ -1877,7 +1919,7 @@ function searchSubs() {
   const q = document.getElementById('subSearch').value.toLowerCase().trim();
   const results = document.getElementById('sub-results');
   if (!q || q.length < 2) { results.innerHTML = ''; return; }
-  const rows = document.querySelectorAll('.meal-table tbody tr');
+  const rows = Array.from(document.querySelectorAll('.meal-table tbody tr')).filter(function(r){var oc=r.closest('.opcao-content');return !oc || oc.classList.contains('active');});
   const found = [];
   rows.forEach(row => {
     const name = row.querySelector('.food-name');
